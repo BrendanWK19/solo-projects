@@ -54,9 +54,13 @@ def take_turn(direction, board):
                         board[i - shift][j] = 0
                         merged[i - shift - 1][j] = True
 
-
     elif direction == 'DOWN':
-        pass
+        for i in range(3):
+            for j in range(4):
+                shift = 0
+                for q in range(i + 1):
+                    if board[3 - q][j] == 0:
+                        
     elif direction == 'LEFT':
         pass
     elif direction == 'RIGHT':
