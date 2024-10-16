@@ -47,7 +47,7 @@ def game_loop():
         for event in pygame.event.get():
             #quit game
             if event.type == pygame.QUIT:
-                run = False
+                pygame.quit()
             #hit button
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if hbutton.collidepoint(event.pos):
@@ -149,7 +149,7 @@ def main():
 
                 #event handler outside of run
                 if event.type == pygame.QUIT:
-                    return
+                    pygame.quit()
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     if play_again_button.collidepoint(event.pos):
                         play_again = True
